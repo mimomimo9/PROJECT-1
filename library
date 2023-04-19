@@ -1,0 +1,34 @@
+user_name=input("enter user name:")
+user_password=input("enter user password:")
+print("library",user_name)
+M={"JAVA":25,"JAVASCRIPT":45,"PYTHON":31}
+while True:
+    choice=int(input('''given choices
+                     press 1 for addition of books
+                     press 2 for lending
+                     press 3 for returning
+                     press 4 for remaining books...'''))
+if choice==1:
+     a= input("book name:").lower()
+     b=int(input("enter the no of books:"))
+     M[a]+=b
+     print(M)
+elif choice==2:
+    print("remaining books:","\n",M)
+    a=input("booklending:").lower()
+    b=int(input("enter the no of books:"))
+    if M[a]>=b:
+       M[a]-=b
+    elif L[a]==0:
+        print("books unavailable")
+    else:
+        print("enter quantity")
+elif choice==3:
+    a=input("enter book name want to return:").lower()
+    L[a]+=int(input("enter the quantity:"))
+elif choice==4:
+    print(L)
+else:
+    print("bye bye")
+    break
+    
